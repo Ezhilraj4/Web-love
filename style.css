@@ -1,0 +1,82 @@
+:root {
+    --pink-bg: #ffeef2;
+    --dark-pink: #d63384;
+    --soft-pink: #ff8fa3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--pink-bg);
+    overflow-x: hidden;
+    color: #555;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--dark-pink);
+    margin-bottom: 20px;
+}
+
+.letter-card {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(214, 51, 132, 0.1);
+    max-width: 400px;
+    line-height: 1.8;
+    text-align: center;
+    border: 1px solid #fce4ec;
+}
+
+.photo-frame {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.photo-frame img {
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* Game Styles */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.heart-btn {
+    font-size: 2rem;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.heart-btn:hover { transform: scale(1.1); }
+
+.reason-box {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--dark-pink);
+    min-height: 50px;
+}
