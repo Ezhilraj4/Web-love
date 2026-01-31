@@ -3,45 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You, With Love ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>For My Everything ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="bg-hearts"></div>
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
 
-    <section class="hero-section">
-        <div class="content" data-aos="fade-up">
-            <div class="top-hearts">❤️❤️❤️</div>
-            <h1 class="title">A Letter for You</h1>
-            <div class="letter-card">
+    <div class="background-animation" id="hearts-bg"></div>
+
+    <section class="hero">
+        <div class="music-control" onclick="toggleMusic()">🎵 Play Music</div>
+        <div data-aos="zoom-in">
+            <h1 class="main-title">A Letter for You</h1>
+            <div class="heart-divider">❤️❤️❤️</div>
+            <div class="letter-box">
                 <p>My Dearest Love,</p>
-                <p>Every moment with you feels like a beautiful dream I never want to wake up from. Your smile lights up my world...</p>
-                <p>In your eyes, I found my home.<br>In your heart, I found my love.</p>
-                <p><strong>Forever and always yours, ❤️</strong></p>
+                <p>Every moment with you feels like a beautiful dream I never want to wake up from. Your smile lights up my world, your laughter is my favorite melody, and your love is the greatest gift I've ever received.</p>
+                <p><strong>Forever Yours, ❤️</strong></p>
             </div>
-            <div class="scroll-indicator">Scroll for more <span>∨</span></div>
+            <div class="scroll-down">Scroll to see our journey ↓</div>
         </div>
     </section>
 
-    <section class="memories-section" data-aos="fade-up">
-        <h2 class="section-title">Memories ❤️</h2>
-        <p class="sub-title">Our beautiful journey together</p>
-        <div class="photo-frame">
-            <img src="https://via.placeholder.com/350x450" id="slideshow" alt="Memory">
-            <div class="caption">The moment that stole my heart</div>
+    <section class="memories">
+        <h2 class="section-title" data-aos="fade-up">Memories ❤️</h2>
+        <div class="gallery-container">
+            <div class="memory-card" data-aos="flip-left">
+                <img src="https://via.placeholder.com/300x400" alt="Memory 1">
+                <p>The moment that stole my heart 🌹</p>
+            </div>
+            <div class="memory-card" data-aos="flip-right" data-aos-delay="200">
+                <img src="https://via.placeholder.com/300x400" alt="Memory 2">
+                <p>Every second with you is precious ✨</p>
+            </div>
         </div>
     </section>
 
-    <section class="game-section" data-aos="zoom-in">
-        <h2 class="section-title">A Little Game Just for You ✨</h2>
-        <p>Tap each heart to reveal why I love you</p>
-        <div id="game-board" class="game-grid">
+    <section class="game">
+        <h2 class="section-title" data-aos="fade-up">A Little Game Just for You ✨</h2>
+        <p data-aos="fade-up">Tap each heart to reveal why I love you</p>
+        <div id="game-board" class="heart-grid" data-aos="zoom-in">
             </div>
-        <div id="reason-display" class="reason-box">Click a heart!</div>
+        <div id="game-msg" class="message-display">...</div>
     </section>
+
+    <footer class="footer">
+        <p>Made with ❤️ for You</p>
+    </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
