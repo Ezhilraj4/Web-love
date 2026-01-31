@@ -1,82 +1,94 @@
 :root {
-    --pink-bg: #ffeef2;
-    --dark-pink: #d63384;
-    --soft-pink: #ff8fa3;
+    --primary: #ff4d6d;
+    --soft-pink: #ffccd5;
+    --white: #ffffff;
 }
 
 body {
     margin: 0;
-    padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--pink-bg);
+    background: linear-gradient(135deg, #fff0f3 0%, #ffccd5 100%);
     overflow-x: hidden;
-    color: #555;
+    text-align: center;
+}
+
+/* Floating Hearts Background */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 section {
     min-height: 100vh;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
 }
 
-.title {
+.main-title {
     font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
-    color: var(--dark-pink);
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    color: var(--primary);
 }
 
-.letter-card {
-    background: white;
+.letter-box {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 15px 35px rgba(214, 51, 132, 0.1);
-    max-width: 400px;
-    line-height: 1.8;
-    text-align: center;
-    border: 1px solid #fce4ec;
+    border-radius: 25px;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
+    margin: 20px auto;
+    border: 1px solid white;
 }
 
-.photo-frame {
+.memory-card {
     background: white;
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.photo-frame img {
-    width: 300px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-/* Game Styles */
-.game-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.heart-btn {
-    font-size: 2rem;
-    background: white;
-    border: none;
-    border-radius: 15px;
-    padding: 20px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    margin: 15px;
     transition: transform 0.3s;
 }
 
-.heart-btn:hover { transform: scale(1.1); }
+.memory-card img {
+    width: 250px;
+    border-radius: 10px;
+}
 
-.reason-box {
-    margin-top: 20px;
-    font-weight: bold;
-    color: var(--dark-pink);
-    min-height: 50px;
+.heart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 320px;
+    margin: 30px auto;
+}
+
+.h-btn {
+    background: white;
+    border: none;
+    font-size: 1.8rem;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 100;
 }
